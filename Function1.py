@@ -14,4 +14,15 @@ def swap(x,y):
 #호출
 result = swap(3,4)
 print(result)
-print("aaa")
+
+#디버깅 연습
+def intersect(prelist,postlist):
+    #지역변수
+    result=[]
+    for x in prelist:
+        if x in postlist and x not in result:
+            result.append(x)
+    return result
+
+#호출
+print( intersect("HAM","SPAM"))
