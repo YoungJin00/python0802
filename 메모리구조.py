@@ -6,13 +6,18 @@ class SuperClass:
         print(self.x)
 
 class SubClass(SuperClass):
+    #상속 받은 생성자 메서드 재정의
     def __init__(self):
+        #
+        SuperClass.__init__(self)
         self.y = 20
     def printY(self):
         print(self.y)
 
 s = SubClass()
 s.a = 30 
-print("SuperClass:", SuperClass.__dict__)
-print("SubClass:", SubClass.__dict__)
-print("s:", s.__dict__)
+# print("SuperClass:", SuperClass.__dict__)
+# print("SubClass:", SubClass.__dict__)
+# print("s:", s.__dict__)
+s.printX()
+s.printY()
